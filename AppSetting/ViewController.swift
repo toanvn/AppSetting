@@ -20,6 +20,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func openWifiTouch(_ sender: Any) {
+        let url = URL(string: "App-Prefs:root=WIFI")!
+        if UIApplication.shared.canOpenURL(url){
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @IBAction func openKeyboardTouch(_ sender: Any) {
+        let url = URL(string: "App-Prefs:root=General&path=Keyboard")!
+        if UIApplication.shared.canOpenURL(url){
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @IBAction func openLocationTouch(_ sender: Any) {
+        let url = URL(string: "App-Prefs:root=LOCATION_SERVICES")!
+        if UIApplication.shared.canOpenURL(url){
+            UIApplication.shared.open(url)
+        }
+    }
 }
 
